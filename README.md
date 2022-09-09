@@ -4,7 +4,7 @@ Map `Handle<T>` to `Handle<U>`.
 
 All handles pointing to asset *a* of type `T` will point to asset *b* of type `U` when mapped.
 
-```
+```rust
 let mapped = match handle.map_weak::<U>() {
     Err(_) => panic!("asset is pending"),
     Ok(mapped) => mapped,
@@ -13,6 +13,6 @@ let mapped = match handle.map_weak::<U>() {
 
 Make it strong with `Assets<U>` if desired:
 
-```
+```rust
 mapped.make_strong(assets);
 ```
