@@ -3,6 +3,7 @@ use bevy::{
     prelude::Handle,
 };
 
+#[derive(Debug)]
 pub enum MapHandleError {
     /// The asset is still pending and has no id assigned.
     PendingAsset,
